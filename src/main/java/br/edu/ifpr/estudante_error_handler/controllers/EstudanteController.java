@@ -16,7 +16,7 @@ import br.edu.ifpr.estudante_error_handler.models.Estudante;
 @Controller
 public class EstudanteController {  
 
-    @GetMapping("/estudante")
+    @GetMapping({"", "/", "/estudante"})
     public String cadastro(Estudante estudante) {
         return "estudante-cadastro";
     }
