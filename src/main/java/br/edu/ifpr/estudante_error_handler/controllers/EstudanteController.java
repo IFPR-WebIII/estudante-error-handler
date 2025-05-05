@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import jakarta.validation.Valid;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import br.edu.ifpr.estudante_error_handler.exceptions.EstudanteException;
 import br.edu.ifpr.estudante_error_handler.models.Estudante;
 
 
@@ -33,6 +34,13 @@ public class EstudanteController {
         redirectAttributes.addFlashAttribute("estudante", estudante);
 
         return "sucesso";
+    }
+
+    @GetMapping("/forcar_erro")
+    public String forcarErro(){
+
+        throw new EstudanteException("Um erro aconteceu");
+
     }
     
 }
