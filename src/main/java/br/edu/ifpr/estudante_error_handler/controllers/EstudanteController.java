@@ -14,16 +14,7 @@ import br.edu.ifpr.estudante_error_handler.models.Estudante;
 
 
 @Controller
-public class EstudanteController {
-
-
-    // @GetMapping("/forcar_erro")
-    // public String getMethodName() {
-
-    //     throw new FormValidationException("Um erro qualquer ocorreu");
-
-    // }
-    
+public class EstudanteController {  
 
     @GetMapping("/estudante")
     public String cadastro(Estudante estudante) {
