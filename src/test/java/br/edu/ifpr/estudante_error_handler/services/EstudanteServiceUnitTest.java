@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.LocalDate;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Spy;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import br.edu.ifpr.estudante_error_handler.models.Estudante;
 public class EstudanteServiceUnitTest {
 
     @Autowired
-    EstudanteService service;
+    private EstudanteService service;
 
     @Test
     public void deveCadastrarUmEstudanteComSucesso(){
@@ -27,7 +28,7 @@ public class EstudanteServiceUnitTest {
         //Act
         Estudante resultado = service.cadastrarEstudante(e1);
 
-        System.out.println("elementos na lista" + service.buscarTodos().size());
+        System.out.println("elementos na lista: " + service.buscarTodos().size());
 
         //Assert
         assertThat(resultado).isNotNull();

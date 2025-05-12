@@ -1,10 +1,6 @@
 package br.edu.ifpr.estudante_error_handler.controllers.errors;
 
-import java.util.List;
-
 import org.springframework.ui.Model;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
